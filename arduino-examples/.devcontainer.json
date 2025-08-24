@@ -1,0 +1,23 @@
+{
+    "name": "Arduino Copilot Examples",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.vscode-arduino",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack"
+            ],
+            "settings": {
+                "arduino.path": "/usr/local/bin",
+                "arduino.commandPath": "arduino-cli",
+                "arduino.useArduinoCli": true,
+                "arduino.defaultBaudRate": 115200
+            }
+        }
+    },
+    "forwardPorts": [],
+    "postCreateCommand": "echo 'Arduino development environment with Copilot ready!'"
+}

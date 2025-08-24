@@ -69,13 +69,37 @@ Este directorio contiene ejemplos de código Arduino diseñados para demostrar l
 4. **Experimenta con diferentes enfoques** sugeridos por Copilot
 5. **Revisa y adapta** las sugerencias a tu proyecto específico
 
+## Configuración del entorno de desarrollo
+
+### Opción 1: VS Code con Docker (Recomendado)
+El directorio incluye configuración para un contenedor de desarrollo con Arduino CLI y Copilot:
+
+1. Abre VS Code en el directorio `arduino-examples/`
+2. Acepta abrir en contenedor de desarrollo cuando VS Code lo sugiera
+3. Espera a que se construya el entorno (primera vez puede tomar varios minutos)
+4. ¡Ya tienes Arduino CLI y Copilot listos para usar!
+
+### Opción 2: Instalación local
+1. Instala Arduino IDE 2.0+ o Arduino CLI
+2. Instala la extensión GitHub Copilot en VS Code
+3. Instala la extensión Arduino para VS Code
+
 ## Compilación y carga
 
 Todos los ejemplos están diseñados para compilar con Arduino IDE 1.8+ o Arduino CLI. Asegúrate de:
 
 - Seleccionar la placa correcta (Arduino Uno, Nano, etc.)
-- Seleccionar el puerto serie correcto
+- Seleccionar el puerto serie correcto  
 - Instalar las librerías necesarias (como Servo.h)
+
+### Usando Arduino CLI:
+```bash
+# Compilar un sketch
+arduino-cli compile --fqbn arduino:avr:uno basic_led_blink.ino
+
+# Subir a la placa (reemplaza /dev/ttyUSB0 con tu puerto)
+arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno basic_led_blink.ino
+```
 
 ## Contribuciones
 
